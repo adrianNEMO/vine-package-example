@@ -1,0 +1,32 @@
+{
+  "name": "lighthouse",
+  "description": "",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm run --recursive --parallel dev",
+    "test": "pnpm run --recursive --parallel test",
+    "lint": "pnpm run --recursive --parallel lint",
+    "format:check": "pnpm run --recursive --parallel format:check",
+    "format": "pnpm run --recursive --parallel format",
+    "build": "pnpm run --recursive --parallel build",
+    "typecheck": "pnpm run --recursive --parallel typecheck",
+    "clean": "pnpm run --recursive --parallel clean && rm -rf node_modules",
+    "list-version-mismatches": "syncpack list-mismatches",
+    "fix-versions": "syncpack fix-mismatches"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "engines": {
+    "node": ">=21",
+    "pnpm": ">=8"
+  },
+  "devDependencies": {
+    "syncpack": "^11.2.1",
+    "typescript": "^5.3.3"
+  }
+}
